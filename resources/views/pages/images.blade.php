@@ -5,7 +5,7 @@
 @endsection
 
 @section('body-class')
-    col-md-10
+    col-md-11
 @endsection
 
 @section('admin-title')
