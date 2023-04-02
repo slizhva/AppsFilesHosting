@@ -40,7 +40,7 @@
 
         <div class="flex">
             <h1 class="mt-6 text-xl font-semibold text-gray-900">
-                Apps Images Hosting
+                Apps Files Hosting
             </h1>
         </div>
     </div>

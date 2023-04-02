@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-12">
 
-                <strong>---Add image:---</strong>
+                <strong>---Add file:---</strong>
                 <form method="POST" action="{{ route('image.add', $set['id']) }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="d-flex flex-column">
