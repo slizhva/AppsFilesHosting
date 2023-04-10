@@ -24,7 +24,33 @@
                 <form method="POST" action="{{ route('image.add', $set['id']) }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="d-flex flex-column">
-                        <input name="image" type="file" class="col-md-7 mt-2 mb-3" required>
+                        <div class="btn-group col-md-5" role="group" aria-label="Optimize toggle button group">
+                            <input type="radio" class="btn-check" name="optimize" value="no" id="btnradio1" autocomplete="off" checked>
+                            <label class="btn btn-outline-primary" for="btnradio1">Without optimize</label>
+
+                            <input type="radio" class="btn-check" name="optimize" value="yes" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-primary" for="btnradio2">With optimize</label>
+                        </div>
+                        <div class="btn-group col-md-5 mt-3">
+                            <div class="form-floating me-2">
+                                <input name="width" type="number" class="form-control" id="width" placeholder="width" value="">
+                                <label for="width">Width</label>
+                            </div>
+                            <div class="form-floating">
+                                <input name="height" type="number" class="form-control" id="width" placeholder="width" value="">
+                                <label for="width">Height</label>
+                            </div>
+                        </div>
+                        <div class="btn-group col-md-5 mt-3 mb-3">
+                            <div class="me-2">
+                                <label for="width">Single File</label>
+                                <input class="form-control" name="image" type="file">
+                            </div>
+                            <div>
+                                <label for="width">Bulk Upload</label>
+                                <input class="form-control" name="bulk_upload" type="file">
+                            </div>
+                        </div>
                         <input type="submit" value="Upload" class="col-md-2">
                     </div>
                 </form>
