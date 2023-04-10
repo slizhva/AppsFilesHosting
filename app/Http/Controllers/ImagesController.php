@@ -54,6 +54,9 @@ class ImagesController extends Controller
             ->toArray()[0];
 
         if (!empty($request->bulk_upload)) {
+            ini_set('memory_limit', '1024M');
+            set_time_limit(1200);
+
             $storagePath = Storage::disk('local')->put('', $request->bulk_upload);
             $bulkImages = file_get_contents(Storage::path($storagePath));
             Storage::disk('local')->delete($storagePath);
